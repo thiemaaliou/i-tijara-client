@@ -1,0 +1,33 @@
+<ion-content>
+    <img alt="logo" src="../../assets/i-tijara-logo.png" class="img">
+    <form #f="ngForm">
+      <ion-item>
+        <ion-icon slot="start" name="contact"></ion-icon>
+        <ion-input type="name" required [(ngModel)]="userName" name="userName" placeholder="Nom d'utilisateur"></ion-input>
+      </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="call"></ion-icon>
+          <ion-input type="tel" required [(ngModel)]="tel" name="tel" placeholder="N° Téléphone"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon slot="start" name="pin"></ion-icon>
+            <ion-input type="text" required [(ngModel)]="address" name="address" placeholder="Adresse"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="mail"></ion-icon>
+          <ion-input type="email" required [(ngModel)]="email" name="email" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="lock"></ion-icon>
+          <ion-icon slot="end" name="eye"></ion-icon>
+          <ion-input type="password" required [(ngModel)]="password" name="password" placeholder="Mot de passe"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="lock"></ion-icon>
+          <ion-icon slot="end" name="eye"></ion-icon>
+          <ion-input type="password" required [(ngModel)]="confirmpassword" name="confirmpassword" placeholder="Confimer votre mot de passe"></ion-input><br><br>
+        </ion-item>
+        <ion-button ion-button type="submit" color="success" (click)="onSignUp()" [disabled]="f.invalid" class="signUpbutton">Créer</ion-button>
+        <p class="login">Vous avez déjà un compte?<br><a [routerLink]="'/login'">S'identifier</a></p>
+    </form>
+</ion-content>

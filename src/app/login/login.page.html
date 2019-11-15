@@ -1,0 +1,18 @@
+<ion-content>
+  <img alt="logo" src="../../assets/i-tijara-logo.png" class="img">
+  <form #f="ngForm">
+      <ion-item>
+        <ion-icon slot="start" name="call"></ion-icon>
+        <ion-input type="tel" required [(ngModel)]="tel" name="tel" placeholder="N° Téléphone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="lock"></ion-icon>
+        <ion-icon slot="end" name="eye"></ion-icon>
+        <ion-input type="password" required [(ngModel)]="password" name="password" placeholder="Mot de passe"></ion-input>
+      </ion-item><br>
+      <ion-button ion-button type="submit" color="success" (click)="onLogin()" [disabled]="f.invalid" class="loginbutton">S'identifier</ion-button>
+      <p class="reset"><a [routerLink]="'/reset'">Mot de passe oublié?</a></p>
+      <p class="Or"><small>________________OU BIEN______________</small></p>
+      <p class="created">Vous n'avez pas encore de compte? <a [routerLink]="'/sign-up'">Créer maintenant</a></p>
+  </form>
+</ion-content>

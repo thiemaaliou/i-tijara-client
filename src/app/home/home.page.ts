@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BoundEventAst } from '@angular/compiler';
+import {url} from 'inspector';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +10,9 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
+
+ 
+
+  
 
 }
