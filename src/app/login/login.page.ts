@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -11,11 +11,7 @@ tel:number;
 password:string;
   constructor() { }
 
-  ngOnInit() {
-  }
-  onLogin(){
-    console.log('Téléphone: ' +this.tel,
-                'Password: ' +this.password);
-  }
-
+ 
+  
+  ngOnInit() {}
 }

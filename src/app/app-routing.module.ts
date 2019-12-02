@@ -18,8 +18,8 @@ const routes: Routes = [
   { path: 'introduction', loadChildren: './introduction/introduction.module#IntroductionPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'sign-up', loadChildren: './sign-up/sign-up.module#SignUpPageModule' },
-  { path: 'reset', loadChildren: './reset/reset.module#ResetPageModule' },  { path: 'confirmation', loadChildren: './reset/confirmation/confirmation.module#ConfirmationPageModule' }
-
+  { path: 'reset', loadChildren: './reset/reset.module#ResetPageModule' },
+  { path: 'confirmation', loadChildren: './reset/confirmation/confirmation.module#ConfirmationPageModule' },  { path: 'details', loadChildren: './details/details.module#DetailsPageModule' },
 
 
 ];

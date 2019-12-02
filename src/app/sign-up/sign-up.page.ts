@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,25 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpPage implements OnInit {
 
-  userName:string;
-  tel:number;
-  address:string;
-  password:string;
-  confirmpassword:string;
+  userName: string;
+  tel: number;
+  address: string;
+  password: string;
+  confirmpassword: string;
 
-  constructor() { }
+  constructor(public alertController:AlertController) { }
 
   ngOnInit() {
   }
-  onSignUp(){
-    console.log('UserName: '+this.userName, 
-                'Téléphone: ' +this.tel, 
-                'Addresse: ' +this.address,
-                'Password: ' +this.password, 
-                'Confirm Password: ' +this.confirmpassword);
- 
+  async onSignUp() {
+    const alert = await this.alertController.create({
+      header: 'Confirmation!',
+      message: 'Etes-vous sûr de vouloir vraiment continuer?',
+      buttons: [
+        {
+          text: 'Non',
+          role: 'cancel',
+          handler: (blah) => {
+          }
+        }, {
+          text: 'Oui',
+          handler: () => {
+            console.log('Compte créé avec succcés');
+          }
+        }
+      ]
+    });
 
+    await alert.present();
   }
-
-
 }

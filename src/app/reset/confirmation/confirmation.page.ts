@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-confirmation',
@@ -10,13 +11,17 @@ export class ConfirmationPage implements OnInit {
   newpassword: string;
   confirmpassword : string;
 
-  constructor() { }
+  constructor(public alertController:AlertController) { }
 
   ngOnInit() {
   }
 
-  onFinish(){
-    console.log(this.newpassword, this.confirmpassword)
+  async onFinish() {
+    const alert = await this.alertController.create({
+      message: 'Votre mot de passe a été réinitisaliser avec succés',
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
-  
 }

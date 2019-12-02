@@ -9,38 +9,30 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent {
-
+export class AppComponent{
 
   public appPages = [
     {
+      title: 'Accueil',
+      url: '/home'
+    },
+    {
       title: 'Chapelets',
-      url: '/list',
-      icon: 'list'
+      url: '/list'
     },
     {
       title: 'Bonnets',
-      url: '/list',
-      icon: 'list'
+      url: '/list'
     },
     {
       title: 'Chaussures',
-      url: '/list',
-      icon: 'list'
-    }
-    ,
+      url: '/list'
+    },
     {
-      title: 'Habillement',
-      url: '/list',
-      icon: 'list'
-    }
-    ,
-    {
-      title: 'Voiles et Echarpes',
-      url: '/list',
-      icon: 'list'
-    }
-  ];
+      title: 'Habillements et Accessoires',
+      url: '/list'
+    },
+    ];
 
   constructor(
     private platform: Platform,

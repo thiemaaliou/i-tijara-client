@@ -11,7 +11,7 @@
           <ion-icon slot="end" name="eye"></ion-icon>
           <ion-input type="password" required [(ngModel)]="confirmpassword" name="confirmpassword" placeholder="Confimer votre mot de passe"></ion-input>
         </ion-item>
-        <ion-button type="ion-button-submit" color="success" [disabled]="f.invalid" (click)="onFinish()" class="sendbutton">Terminer</ion-button>
+        <ion-button type="ion-button-submit" color="success" [disabled]="f.invalid" (click)="onFinish()" class="sendbutton">Terminer</ion-button><br><br>
         <ion-label class="margin">
           <ion-icon slot="start" name="arrow-back"></ion-icon>
           <a [routerLink]="'/reset'" class="back">Retour</a>

@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroductionPage implements OnInit {
 
-  title="Bienvenu chez i-Tijara";
-  description="Nous sommes le Groupe i-Tijara et nous sommes là pour vous offrir les meilleurs produits. Détendez-vous et faites vos achats tranquillement.";
+  title: string ="Bienvenu chez i-Tijara";
+  description: string ="Nous sommes le Groupe i-Tijara et nous sommes là pour vous offrir les meilleurs produits. Détendez-vous et faites vos achats tranquillement.";
 
   constructor() { }
 

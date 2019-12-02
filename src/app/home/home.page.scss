@@ -1,6 +1,77 @@
-.welcome-card{
+.welcome-card img{
+  height: 150px;
   margin: 0px;
 }
-.welcome-card img{
+ion-card{
+  margin: 0px;
+  padding: 0px;
+}
+
+.title{
+  padding: 0px;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 12px;
+  
+}
+ion-card-title{
+  font-size: 15px;
+}
+
+#images{
   height: 120px;
+  width: 100vw;
+  padding: 0px;
+}
+#imageslide{
+  height: 120px;
+  width: 100%;
+  padding: 0px;
+}
+#textes{
+  width: 100px;
+  padding: 0px;
+}
+.name, .price{
+  text-align: center;
+}
+.price{
+  color:#4eb542;
+}
+
+#content{
+  padding: 0px;
+}
+.nom,.prix{
+  text-align: start;
+}
+.prix{
+  color:#4eb542;
+  margin-top: 5px;
+}
+ion-grid{
+  padding: 0px;
+}
+.buttonheart,.buttonHeart{
+  margin:auto;
+  height: auto;
+}
+.buttonheart{
+  float: right;
+}
+
+.iconsearch{  
+  float: right;
+  margin-top: 7px;
+}
+.lastimage{
+  background: url("../../assets/images/pretaporter.jpeg");
+  background-repeat: no-repeat;
+
+}
+.buttonplus{
+  width: 120px;
+  position: relative;
+  top: 50px;
+  float: right;
 }

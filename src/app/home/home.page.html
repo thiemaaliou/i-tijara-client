@@ -1,23 +1,160 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar> 
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-searchbar placeholder="i-TIJARA"></ion-searchbar>
+      <ion-chip class="iconsearch" [routerLink]="'/home'">
+        <ion-icon name="search" color="light"></ion-icon>
+      </ion-chip>
+      <ion-title class="title">
+         {{title}}
+      </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-card class="welcome-card">
+    <ion-card class="welcome-card"> 
       <img src="../../assets/images/i-tijara.PNG" alt="" />
     </ion-card>
     <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>
-        Les produits Les mieux vendus
-      </ion-card-subtitle>
+      <ion-card-title>
+       {{Categories.categorie1}}
+      </ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      
+    <ion-card-content no-padding>
+      <ion-slides pager=false [options]="slideOpts"> 
+        <ion-slide *ngFor="let produit of produits">
+          <ion-card>
+            <ion-card-header id="imageslide">
+              <img [src]="produit.url"/>
+            </ion-card-header>
+            <ion-card-content id="textes">
+                <p class="name"><small>{{produit.name}}</small></p>
+                <p class="price">{{produit.price}}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
     </ion-card-content>
     </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          {{Categories.categorie2}}
+        </ion-card-title>
+      </ion-card-header>
+        <ion-card-content id="content">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" size-sm *ngFor="let produit of produits">
+                <button no-padding [routerLink]="'/details'">
+                  <img [src]="produit.url" id="images"/>
+                  <p class="nom">{{produit.name}}</p>
+                </button>
+                  <p class="prix">{{produit.price}}
+                  <ion-chip color="danger" class="buttonheart">
+                    <ion-icon name="heart"></ion-icon>
+                  </ion-chip>
+                </p>
+              </ion-col>
+              <ion-col class="lastimage">
+                  <ion-button color="success" class="buttonplus">
+                      <ion-label>Voir</ion-label>
+                      <ion-icon name="add"></ion-icon>
+                  </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+    </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            {{Categories.categorie3}}
+          </ion-card-title>
+        </ion-card-header>
+          <ion-card-content id="content">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="6" size-sm *ngFor="let produit of produits">
+                  <button no-padding>
+                    <img [src]="produit.url" id="images"/>
+                    <p class="nom">{{produit.name}}</p>
+                  </button>
+                    <p class="prix">{{produit.price}}
+                      <ion-chip color="danger" class="buttonheart">
+                      <ion-icon name="heart"></ion-icon>
+                    </ion-chip>
+                  </p>
+                </ion-col>
+                <ion-col class="lastimage">
+                    <ion-button color="success" class="buttonplus">
+                        <ion-label>Voir</ion-label>
+                        <ion-icon name="add"></ion-icon>
+                    </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              {{Categories.categorie4}}
+            </ion-card-title>
+          </ion-card-header>
+            <ion-card-content id="content">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6" size-sm *ngFor="let produit of produits">
+                    <button no-padding>
+                      <img [src]="produit.url" id="images"/>
+                      <p class="nom">{{produit.name}}</p>
+                    </button>
+                      <p class=prix>{{produit.price}}
+                        <ion-chip color="danger" class="buttonheart">
+                            <ion-icon name="heart"></ion-icon>
+                        </ion-chip>
+                      </p>
+                  </ion-col>
+                  <ion-col class="lastimage">
+                      <ion-button color="success" class="buttonplus">
+                          <ion-label>Voir</ion-label>
+                          <ion-icon name="add"></ion-icon>
+                      </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              {{Categories.categorie5}}
+            </ion-card-title>
+          </ion-card-header>
+            <ion-card-content id="content">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6" size-sm *ngFor="let produit of produits">
+                    <button no-padding>
+                      <img [src]="produit.url" id="images"/>
+                      <p class="nom">{{produit.name}}</p>
+                    </button>
+                      <p class="prix">{{produit.price}}
+                        <ion-chip color="danger" class="buttonheart">
+                          <ion-icon name="heart"></ion-icon>
+                        </ion-chip>
+                     </p>
+                  </ion-col>
+                  <ion-col class="lastimage">
+                      <ion-button color="success" class="buttonplus">
+                          <ion-label>Voir</ion-label>
+                          <ion-icon name="add"></ion-icon>
+                      </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+      </ion-card>
 </ion-content>
